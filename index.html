@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Hello, World!</title>
+  <style>
+  img {
+ width: 250px;
+}
+
+body {
+ height: 500px;
+}
+
+#page {
+ border-radius: 5px;
+ margin: 5px;
+ height: auto;
+ border: 1px solid black;
+ padding: 10px;
+}
+
+button {
+ border-radius: 5px;
+ margin: 5px;
+ font-weight: bold;
+ color: #4D4D87;
+ border: 1px solid;
+ background-color: #D9E8FB;
+}
+
+#settings {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+h1 {
+ text-align: center;
+}
+  </style>
+</head>
+ <body onload ="bello()">
+  <h1>WordSmith</h1>
+  <div id="settings">
+   <div>
+    <button onclick="setColor()">Set Color</button>
+    <input type="value">
+   </div>
+   <div>
+    <button onclick="setLink()">Set Link</button>
+    <input type="value"
+     value="https://mimo.app/i/hourglass-large.png">
+   </div>
+  </div>
+  <div id="page">
+   <img src="https://mimo.app/i/clock-tower-night.png" download>
+   <p>It was a bright cold day in April, and the clocks were striking
+    thirteen. </p>
+    
+  <a id="first" href="https://mimo.app/i/clock-tower-night.png">download</a>
+  </div>
+   <script>
+   const first = document.querySelector(
+ "#first");
+const el = document.querySelector(
+ "#page");
+const link = el.querySelector("img");
+
+function setColor() {
+ const input = document
+  .querySelectorAll("input")[0];
+ el.style.color = input.value;
+}
+
+function setLink() {
+
+
+ const input = document
+  .querySelectorAll("input")[1];
+ link.setAttribute("src", input
+  .value);
+ first.setAttribute("href", input
+  .value)
+}
+   </script>
+</body>
+</html>
